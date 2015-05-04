@@ -15,16 +15,23 @@ odr <PATH/TO/package.json>
 
 odr
 
-# if --dev option  odr will get package list from `devDependencies` key
-# instead of `dependencies`
+# so above is same as:
+
+odr "./packge.json"
+
+# if --dev option is used, odr will get package list from
+#  `devDependencies` key instead of `dependencies`
 
 odr <PATH/TO/package.json> --dev
+
+# if --all option is used, odr will get package list from
+# both `devDependencies` and  `dependencies` sections
 ```
 
 ##Installation
 
 ```bash
-npm install padding --save
+npm install open-deps-repos --save
 ```
 
 ##License
