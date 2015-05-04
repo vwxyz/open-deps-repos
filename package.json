@@ -1,0 +1,34 @@
+{
+  "name": "open-deps-repos",
+  "version": "0.0.1",
+  "description": "open all repository pages of dependent packages instantly",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vwxyz/open-deps-repos"
+  },
+  "keywords": [
+  ],
+  "author": "vwxyz <feeddict@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vwxyz/open-deps-repos/issues"
+  },
+  "homepage": "https://github.com/vwxyz/open-deps-repos",
+  "bin": {
+    "odr": "./node_modules/coffee-script/bin/coffee ./bin/odr"
+  },
+  "dependencies": {
+    "coffee-script": "^1.9.2",
+    "lodash": "^3.8.0",
+    "npm": "^2.9.0",
+    "yargs": "^3.8.0"
+  },
+  "devDependencies": {
+    "cradle": "^0.6.9",
+    "mocha": "^2.2.4"
+  }
+}

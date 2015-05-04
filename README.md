@@ -1,6 +1,6 @@
 #open-deps-repos
 
-**open-deps-repos**  is a tiny wrapper for `npm repo <package>` command
+**open-deps-repos**  is a tiny wrapper for [`npm repo <package>`](https://www.npmjs.com/package/npm-repo) command
 
 
 ##Usage
@@ -15,7 +15,8 @@ odr <PATH/TO/package.json>
 
 odr
 
-# if --dev option  odr will get package list from `devDependencies` key instead of `dependencies`
+# if --dev option  odr will get package list from `devDependencies` key
+# instead of `dependencies`
 
 odr <PATH/TO/package.json> --dev
 ```
