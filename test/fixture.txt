@@ -1,0 +1,4 @@
+open coffee-script repository page
+open lodash repository page
+open npm repository page
+open yargs repository page

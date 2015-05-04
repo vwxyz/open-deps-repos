@@ -1,0 +1,6 @@
+An error occurred when opening cradle repository page. Error: no repository
+open coffee-script repository page
+open lodash repository page
+open mocha repository page
+open yargs repository page
+open npm repository page
