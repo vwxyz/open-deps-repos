@@ -1,2 +1,2 @@
-src
-.tmp
+.gitignore
+index.coffee

@@ -1,9 +1,10 @@
 {
   "name": "open-deps-repos",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "open all repository pages of dependent packages instantly",
   "main": "index.js",
   "scripts": {
+    "build": "coffee -bco ./ ./ ",
     "test": "mocha ./test"
   },
   "repository": {
@@ -19,7 +20,7 @@
   },
   "homepage": "https://github.com/vwxyz/open-deps-repos",
   "bin": {
-    "odr": "./node_modules/coffee-script/bin/coffee ./bin/odr"
+    "odr": "./bin/odr"
   },
   "dependencies": {
     "coffee-script": "^1.9.2",
