@@ -19,19 +19,20 @@ odr
 
 odr "./packge.json"
 
-# if --dev option is used, odr will get package list from
-#  `devDependencies` key instead of `dependencies`
+# --dev option
+# will open urls of `devDependencies` instead of `dependencies`
 
 odr <PATH/TO/package.json> --dev
 
-# if --all option is used, odr will get package list from
-# both `devDependencies` and  `dependencies` sections
+# --dev option
+# will open  urls of both `devDependencies` and  `dependencies` sections
+odr <PATH/TO/package.json> --all
 ```
 
 ##Installation
 
 ```bash
-npm install open-deps-repos --save
+npm install open-deps-repos --g
 ```
 
 ##License
