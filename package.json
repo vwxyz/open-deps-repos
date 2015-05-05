@@ -1,6 +1,6 @@
 {
   "name": "open-deps-repos",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "open all repository pages of dependent packages instantly",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,6 @@
     "yargs": "^3.8.0"
   },
   "devDependencies": {
-    "cradle": "^0.6.9",
     "mocha": "^2.2.4"
   }
 }
