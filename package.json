@@ -1,6 +1,6 @@
 {
   "name": "open-deps-repos",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "open all repository pages of dependent packages instantly",
   "main": "index.js",
   "scripts": {
