@@ -30,12 +30,12 @@ module.exports = function() {
     global: true
   }, function(err, npm) {
     return _.each(packagesList, function(pkg) {
-      return npm.commands.repo([pkg], function(err) {
+      npm.commands.repo([pkg], function(err) {
         if (err) {
-          return console.log("An error occurred when opening " + pkg + " repository page. " + err);
-        } else {
-          return console.log("open " + pkg + " repository page");
+          console.log("An error occurred when opening " + pkg + " repository page. " + err);
+          return;
         }
+        return console.log("open " + pkg + " repository page");
       });
     });
   });

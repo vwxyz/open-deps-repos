@@ -26,5 +26,6 @@ module.exports = ->
 			npm.commands.repo [pkg], (err)->
 				if err
 					console.log "An error occurred when opening #{pkg} repository page. #{err}"
-				else
-					console.log "open #{pkg} repository page"
+					return
+				console.log "open #{pkg} repository page"
+			return 

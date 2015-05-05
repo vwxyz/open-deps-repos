@@ -1,28 +1,39 @@
-{ exec } = require "child_process"
+{ execFile } = require "child_process"
 assert = require "assert"
 fs = require "fs"
+
+cmd =  "./bin/odr"
+msg =
+  coffee: "open coffee-script repository page\n"
+  lodash: "open lodash repository page\n"
+  npm: "open npm repository page\n"
+  yargs: "open yargs repository page\n"
+  mocha: "open mocha repository page\n"
+
  
-describe "odr", ->
-  cmds = []
+describe "odr: open-deps-repos", ->
   testJson = "./test/test.package.json"
 
-  beforeEach ->
-    cmds = []
-    cmds.push "coffee ./bin/odr"
-
-
-  it "should open urls of packages in package.json of current directory", (done)->
-    console.log cmds
-    exec cmds.join "", (err, stdout, stderr)->
-      fixture = fs.readFileSync "/test/fixture.txt", "utf-8"
-      assert.equal stdout, fixture
+  it "without path and option", (done)->
+    execFile cmd, (err, stdout, stderr)->
+      assert.notEqual stdout.search(msg.coffee), -1
+      assert.notEqual stdout.search(msg.lodash), -1
+      assert.notEqual stdout.search(msg.npm), -1
+      assert.notEqual stdout.search(msg.yargs), -1
       done()
 
-  it "should open urls devDependencies packages when --dev option is used", (done)->
-    cmds.push testJson
-    cmds.push "--dev"
-    exec cmds.join " ", (err, stdout, stderr)->
-      assert.equal stdout, '0open mocha repository page'
+  it "--dev option", (done)->
+    execFile cmd, ["./test/test.package.json", "--dev"], (err, stdout, stderr)->
+      assert.equal stdout, msg.mocha
+      done()
+
+  it "--all option", (done)->
+    execFile cmd, ["./test/test.package.json", "--all"], (err, stdout, stderr)->
+      assert.notEqual stdout.search(msg.coffee), -1
+      assert.notEqual stdout.search(msg.lodash), -1
+      assert.notEqual stdout.search(msg.npm), -1
+      assert.notEqual stdout.search(msg.yargs), -1
+      assert.notEqual stdout.search(msg.mocha), -1
       done()
 
 
